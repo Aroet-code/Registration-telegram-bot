@@ -1,7 +1,7 @@
 import telebot
 from database.database import *
 
-API_TOKEN = "8002571686:AAHDWuJ8W5Ooh-9VnbyxuCuo--HA7UrKheQ"
+API_TOKEN = ""
 
 db = myDB("database/db.db")
 bot = telebot.TeleBot(API_TOKEN)
@@ -104,5 +104,6 @@ Additionally, you can contact us using this phone number:
 @bot.message_handler(commands=["stop"])
 def stop(message):
     bot.stop_polling()
+
 
 bot.infinity_polling()
